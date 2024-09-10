@@ -7,7 +7,9 @@ qrButton.addEventListener("click", () => {
     // alert("please enter a value");
     swal("please enter a value");
   } else {
+    qrButton.innerText = "loding...";
     qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example${qrValue}`;
     qrImage.alt = `QR Code for ${qrValue}`;
+    qrButton.innerText = "Click Here to Genrate Qr Code";
   }
 });
